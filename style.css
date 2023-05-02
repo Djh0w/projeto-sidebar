@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+      --light-grey: #dce4e3;
+    --text-color: #084236;
+  }
+
+  /*SETADO DIV PRINCIPAL: LAYOUT TUDO EXPANDIDO*/
+.open {
+    position: absolute;
+    width: 250px;
+    height: 768px;
+    left: 0px;
+    top: 0px;        
+    
+    background: var(--green)
+}
+
+/*SETADO NA DIV PRINCIPAL: LAYOUT REDUZIDO BARRA VERTICAL VERDE*/
+.closed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 78px;
+    height: 768px;
+    left: 0px;
+    top: 0px;    
+
+    background: var(--green);
+}
+/*QUANDO DIV PRINCIPAL FECHADA: ESCONDE O LOGOTIPO*/
+.closed .logotipo {
+    display: none;
+}
+/*QUANDO LAYOUT FECHADO: CONFIGURA BOTAO MENU FORMATO DA DIV PRINCIPAL*/
+.closed .menu {    
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 27px;
+    top: 26px;    
+}
+
+/*FORMATA O IMPUT PESQUISA LAYOUT FECHADO E MUDA BACKGROUND*/
+.closed .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 14px;
+    top: 66px; 
+    padding-left: 0px;    
+    
+    
+    background-color: var(--light-grey);
+    
+}
+/*QUANDO FECHADO FORMATA IMAGEM LAYOUT CLOSED*/
+.closed .search img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 13px;
+    top: 13px;
+}
+/*QUANDO FECHADO NAO MOSTRA A DESCRICAO PESQUISA*/
+.closed .search span {
+    display: none;
+}
+/*QUANDO FECHADO FORMATA A DIV LOGOUT MESMO TAMANHO DIV PRINCIPAL*/
+.closed .exit {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 79px;
+    height: 60px;
+    left: 2px;
+    top: 708px;
+
+    background: rgba(220, 228, 227, 0.6);
+}
+/*FECHADO: FORMATA O BOTAO LOGOUT SEGUNDO DIV PRINCIPAL TAMANHO*/
+.closed .exit .img-logout {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: auto;
+    top: auto;
+}
+/*FECHADO: RETIRA A IMAGEM VET E O NOME*/
+.closed .img-user, .closed p{
+    display: none;
+}
+
+.closed .title {
+    left: 98px;
+}
+
+/*FORMATACAO PARA A DIV DE TODOS OS ITENS, DENTRO DA DIV PRINCIPAL(BARRA)*/
+.itens {
+    display: flex;
+    flex-direction: column;  
+    height: 798px; 
+    margin: 26px;
+    gap: 26px;
+    
+}
+/*ABERTO: FORMATACAO ACOMPANHA A BARRA DA DIV PRINCIPAL*/
+.itens-open {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    
+}
+
+/*FECHADO: FORMATACAO ACOMPANHA A BARRA DA DIV PRINCIPAL FECHADO*/
+.itens-closed {
+    display: flex;
+    
+    justify-content: center;
+    width: 50px;
+    height: 50px;    
+}
+/*FECHADO: RETIRA A DESCRICAO DE TODOS OS ITENS*/
+.itens-closed span {
+    display: none;
+}
+
+/*FORMATACAO DAS IMAGENS*/
+img {
+    
+    width: 24px;
+    height: 24px;
+    left: 27px;
+    top: 26px;
+
+    color: var(--text-color);
+}
+
+/*FORMTACAO DO LOGO*/
+.logo {
+    position: absolute;
+    width: 64px;
+    height: 26px;
+    left: 29px;
+    top: 24px; 
+    
+}
+
+/*FORMATACAO DO MENU*/
+.menu {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 212px;
+    top: 26px;
+
+}
+
+/*FORMATACAO DO TITULO DASHBOARD*/
+.title {
+    position: absolute;
+    width: 141px;
+    height: 38px;
+    left: 268px;
+    top: 18px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+
+    color: var(--text-color)
+}
+
+/*ABERTO: CONFIGURACOES DA DIV DE PESQUISA*/
+.search {
+    display: flex;    
+    align-items: center;
+    position: absolute;
+    width: 209px;
+    height: 50.92px;
+    left: 14px;
+    top: 66px;
+    padding-left: 20px;             
+    gap: 13px;     
+
+    background: var(--light-green);
+    border-radius: 12px;
+}
+
+/*ABERTO: CONFIGURACAO DO POSICIONAMENTO DA DIV GRID EMBAIXO DA PESQUISA (PADDING-LEFT)*/
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;    
+}
+
+/*ABERTO: CONFIGURACAO DA DIV LOGOUT*/
+.exit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 251px;
+    height: 60px;
+    left: -1px;
+    top: 708px;
+
+    background: rgba(220, 228, 227, 0.6);
+    
+}
+/*ABERTO: CONFIGURACAO DA IMAGEM DA DIV .EXIT (LOGOUT)*/
+.img-user {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 13px;
+    top: auto;
+    border-radius: 12px;
+}
+/*ABERTO: CONFIGURACAO DO BOTAO LOGOUT DA DIV .EXIT (LOGOUT)*/
+.img-logout {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 212px;
+    top: auto;
+}

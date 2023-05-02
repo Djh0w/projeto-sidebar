@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <!--TECNICA UTILIZADA: TROCA SIDEBAR REALIZADA PELA TROCA DE CLASSES  NAS TAGS-->
+    <div class="closed" id="sidebar">
+
+        <div class="title">
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="itens">
+            <img class="logotipo" src="./images/logo.svg" alt="logotipo">
+            <a href="#" id="menuBtn">
+                <img class="menu" src="./images/menu.svg" alt="menu">
+            </a>
+            
+            <div class="itens-closed" id="item-search">
+                    <div class="search">
+                        <img src="./images/search.svg" alt="pesquisa">
+                        <span>buscar</span>
+                    </div>               
+            </div>
+
+            <div class="itens-closed" id="item-grid">
+                <div class="grid">
+                    <img src="./images/grid.svg" alt="Grid">
+                    <span>Dashboard</span>
+                </div>       
+            </div>
+            <div class="itens-closed" id="item-pet">
+                <img src="./images/pet.svg" alt="patas">
+                <span>Pets</span>
+            </div>
+            <div class="itens-closed" id="item-client">
+                <img src="./images/user.svg" alt="usuario">
+                <span>Clientes</span>
+            </div>
+            <div class="itens-closed" id="item-vet">
+                <img src="./images/vet.svg" alt="vet">
+                <span>Veterinarios</span>
+            </div>
+            <div class="itens-closed" id="item-tools">
+                <img src="./images/settings.svg" alt="configuracoes">
+                <span>Ajustes</span>
+            </div>                      
+                <div class="exit">
+                    <img class="img-user" src="./images/photo.jpg" alt="foto">
+                    <p>Eleanor Pena</p>
+                    <img class="img-logout" src="./images/log-out.svg" alt="sair">
+                </div>            
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
